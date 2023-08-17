@@ -1,9 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Ubuntu } from 'next/font/google';
 import { ReactNode } from 'react';
-import ThemeRegistry from './_components/theme-registry/theme-registry';
+import './global.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-ubuntu',
+  weight: '400',
+});
 
 export const metadata: Metadata = {
   title: 'Avocado',
@@ -12,10 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeRegistry>{children}</ThemeRegistry>
-      </body>
+    <html lang="en" className={`${ubuntu.variable} text-[#fff]`}>
+      <head></head>
+      <body className="bg-[#181818] p-8">{children}</body>
     </html>
   );
 }
