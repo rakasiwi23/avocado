@@ -1,7 +1,5 @@
-import { Box } from '@mui/material'
+import { Box } from '@mui/material';
 
 export default function Home() {
-  return (
-    <Box>Hello</Box>
-  )
+  return <Box>Hello</Box>;
 }
