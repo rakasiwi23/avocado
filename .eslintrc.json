@@ -2,14 +2,20 @@
   "extends": ["next/core-web-vitals", "airbnb-base"],
   "rules": {
     "import/extensions": [
-       "error",
-       "ignorePackages",
-       {
-         "js": "never",
-         "jsx": "never",
-         "ts": "never",
-         "tsx": "never"
-       }
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "newline-per-chained-call": [
+      "error",
+      {
+        "ignoreChainWithDepth": "off"
+      }
     ]
- }
+  }
 }
